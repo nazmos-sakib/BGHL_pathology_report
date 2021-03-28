@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Report Page</title>
+	<script type="text/javascript" src="vue.global.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+	<div class="container mt-5" id="app">	
+		<header class="text-center">
+			<span class="px-5 py-3 font-weight-bold rounded border border-dark">Cross Matching and Screening Report</span>
+		</header>
+		
+		<patient-details-component></patient-details-component>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+		<div class="mx-5 px-5">
+			<div class="row border border-dark mx-5 ">
+					
+				<div class="col-4 py-2 pl-5">
+					<table>
+						<tr>
+							<td>ID NO.</td>
+							<td>:</td>
+							<td>01</td>
+						</tr>
+						<tr>
+							<td>Patient's Name</td>
+							<td>:</td>
+							<td>SONIA</td>
+						</tr>
+						<tr>
+							<td>Refd. By</td>
+							<td>:</td>
+							<td>Self</td>
+						</tr>
+						<tr>
+							<td>Specemrnt</td>
+							<td>:</td>
+							<td>Blood</td>
+						</tr>
+					</table>
+				</div>
+				<div class="col-4 "></div>
+				<div class="col-4 py-2">
+					<table>
+						<tr>
+							<td>Date</td>
+							<td>:</td>
+							<td>21 March 2021</td>
+						</tr>
+						<tr>
+							<td>Age</td>
+							<td>:</td>
+							<td>21</td>
+						</tr>
+						<tr>
+							<td>Sex</td>
+							<td>:</td>
+							<td>Femail</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+				
+		</div>
+
+
+
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div class="text-center">
+			<span class="px-5 py-3 font-weight-bold rounded border border-dark">Blood Bag NO: 01</span>
+		</div>
+		
+	</div>
+		<patient-details-component></patient-details-component>
+		<div id="appa" class="add-top container">
+			<component :is="currentTabComponent">
+				<patient-details-component></patient-details-component>
+			</component>
+		</div>
+
+		<br>
+		<br><br>
+		<br>
+
+		<div > 
+		<div class="report-title content-center">
+			<span>Cross Matching and screening Report</span>
+		</div>
+		<slot></slot>
+		<br>
+		<br>
+		<div class="report-title content-center">
+			<span>Blood Bag NO: 01</span>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class="add-padding-left1">
+
+			<div>
+				<table class="report-table">
+					<tr>
+						<td  class="report-table-data"><b> Blood of pt. Name </b>	</td>
+						<td  class="report-table-data"><b> Age </b></td>
+						<td  class="report-table-data"><b> Sex </b></td>	
+					</tr>	
+					<tr>
+						<td  class="report-table-data">AMBIA</td>
+						<td  class="report-table-data">30 Year(s)</td>
+						<td  class="report-table-data">Female</td>
+					</tr>
+				</table>
+			</div>
+			<br>
+			<div>
+				<table class="report-table">
+					<tr>
+						<td class="report-table-data"><b>Name of Test</b></td>
+						<td class="report-table-data"><b>Result</b></td>
+					</tr>
+					<tr>
+						<td class="report-table-data" rowspan="2">Blood Grouping</td>
+						<td class="report-table-data" ><p>ABO Blood group :        'O'</p></td>
+					</tr>
+					<tr>
+						<td class="report-table-data" ><p>Rh typing : Anti-D    Positive (+Ve)</p></td>
+					</tr>
+				</table>
+			</div>
+			<br>
+			<div>
+				<table class="report-table">
+					<tr>
+						<td  class="report-table-data"><b> Name of Donor </b>	</td>
+						<td  class="report-table-data"><b> Age </b></td>
+						<td  class="report-table-data"><b> Sex </b></td>	
+					</tr>	
+					<tr>
+						<td  class="report-table-data">Nahid</td>
+						<td  class="report-table-data">30 Year(s)</td>
+						<td  class="report-table-data">Male</td>
+					</tr>
+				</table>
+			</div>
+			<br>
+			<br>
+			<div>
+				<table class="report-table ">
+					<tr>
+						<td class="report-table-data"><b>Name of Test</b></td>
+						<td class="report-table-data"><b>Result</b></td>
+					</tr>
+					<tr>
+						<td class="report-table-data" rowspan="2">Blood Grouping</td>
+						<td class="report-table-data" ><p>ABO Blood group :        'O'</p></td>
+					</tr>
+					<tr>
+						<td class="report-table-data" ><p>Rh typing : Anti-D    Positive (+Ve)</p></td>
+					</tr>
+					<tr>
+						<td class="report-table-data">HBsAg</td>
+						<td class="report-table-data">Negative</td>
+					</tr>
+					<tr>
+						<td class="report-table-data">HCV</td>
+						<td class="report-table-data">Negative</td>
+					</tr>
+					<tr>
+						<td class="report-table-data">HIV </td>
+						<td class="report-table-data">Negative</td>
+					</tr>
+					<tr >
+						<td class="report-table-data">VDRL</td>
+						<td class="report-table-data text-center-class" >Non-reactive</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<br>	
+	</div>
+
+
+
+		<script type="text/javascript" src="./components/patient.details.component.js"></script>
+		<script type="text/javascript" src="./components/cross.matching.component.js"></script>
+
+
+		<script type="text/javascript">
+			
+			const app = Vue.createApp({
+				data() {
+					return {
+						message :"sfdsfsd",
+						currentTabComponent : "cross-matching-component",
+						currentTabComponent1 : "patient-details-component",
+					}
+				},
+						
+			})
+
+			app.component('patient-details-component', PatientDetails)
+			app.component('cross-matching-component', CrossMatching)
+
+			const vm = app.mount('#app')
+
+
+
+
+		</script>
+</body>
+</html>
+
+

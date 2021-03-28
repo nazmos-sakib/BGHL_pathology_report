@@ -1,0 +1,97 @@
+*{
+	position: relative;
+}
+
+
+table.report-table, th.report-table-column, td.report-table-data {
+	border: 1px black solid;
+}
+
+table.report-table{
+	border-collapse: collapse;
+	border-spacing: 10px 10px;
+	width: 80%;
+}
+
+
+
+th.report-table-data {
+	height: 30px;
+	text-align: left;
+}
+
+th.report-table-column, td.report-table-data {
+	padding: 10px;
+}
+
+td.report-table-data {
+height: 40px;
+vertical-align: middle;
+text-align: left;
+}
+
+.report-table{
+	background: none;
+}
+
+
+.content-center{
+	margin: auto;
+	position: relative;
+	text-align: center;
+	/*top: 80px;*/
+}
+
+.text-center-class{
+	text-align: center;
+	padding-left: 350px;
+}
+
+
+.patient-details{
+	height: 140px;
+	width: 70%;
+	padding: 20px;
+	border: 2px solid black;
+	box-sizing: border-box;
+	margin-top: 100px; 
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+}
+
+.grid-item-1 {
+  padding: 20px;
+  text-align: left;
+}
+
+.grid-item-2 {
+  padding-left: 200px;
+  padding-top: 20px;
+  text-align: left;
+}
+
+
+div.report-title span{
+	padding: 20px;
+	font-size: 30px;
+	border: 4px solid black;
+	border-radius: 20px;
+	text-align: center;
+	box-shadow: 10px 10px 5px grey;
+}
+
+.add-top{
+	top: 300px;
+}
+
+.add-padding-left{
+	margin-left:300px;
+}
+
+header span{
+	font-size: 25px;
+}
